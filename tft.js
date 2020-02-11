@@ -299,6 +299,7 @@ document.querySelector("form").addEventListener("submit", event => {
 
   if (existingCombos && details[0].combos) {
     combinations.innerHTML = "";
+    build.innerHTML = "";
     combinations.innerHTML += "Item Combinations:";
     details[0].combos.forEach(element => {
       let h5 = document.createElement("H5");
@@ -308,6 +309,7 @@ document.querySelector("form").addEventListener("submit", event => {
     });
   } else if (existingCombos && details[0].built_with) {
     build.innerHTML = "";
+    combinations.innerHTML = "";
     build.innerHTML += "Built with:";
     let arr = [details[0].built_with.item_1, details[0].built_with.item_2];
     arr.forEach(element => {
