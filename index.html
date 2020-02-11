@@ -1,0 +1,44 @@
+<header>
+  <h1>League TFT Database</h1>
+  <p>Currently on Feb 4, 2020 Update. <a href="https://lolchess.gg/patch-notes?hl=en-US" alt="lol chess path notes">Patch notes here.</a></p>
+  <link rel='stylesheet' href='./tft.css'>
+</header>
+<main>
+<!--ref= https://www.w3.org/TR/wai-aria-practices-1.1/#combobox -->
+  <div class='container'>
+    <form class='autocomplete-container'>
+      <div
+        class='autocomplete'
+        role='combobox'
+        aria-expanded='false'
+        aria-owns='autocomplete-results'
+        aria-haspopup='listbox'
+      >
+        <input
+          class='autocomplete-input'
+          placeholder='Search for a TFT item'
+          aria-label='Search for a TFT item'
+          aria-autocomplete='both'
+          aria-controls='autocomplete-results'
+        >
+        <button type='submit' class='autocomplete-submit' aria-label='Search'>
+        Search
+        </button>
+      </div>
+      <ul
+        id='autocomplete-results'
+        class='autocomplete-results hidden'
+        role='listbox'
+        aria-label='Search for a TFT item'
+      >
+      </ul>
+    </form>
+    <p class='search-result'>
+        <p class='name'></p>
+        <p class='bonus'></p>
+        <p class='combos'></p>
+        <p class='built-by'></p>
+    </p>
+  </div>
+  <script src='./tft.js'></script>
+</main>
